@@ -3,23 +3,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "SDK-DisclaimerComponent-SPM",
+    name: "SDK-TermsConditionsComponent-SPM",
     platforms: [.iOS(.v13)],
     products: [
         .library(
-            name: "SDK-DisclaimerComponent-SPM",
-            targets: ["SDK-DisclaimerComponent-SPM", "disclaimerComponent"]
+            name: "SDK-TermsConditionsComponent-SPM",
+            targets: ["SDK-TermsConditionsComponent-SPM", "termsConditionsComponent"]
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/facephi-clienters/FPHIDisclaimerWidget-SPM.git", .exactItem("0.1.7")),
-        .package(url: "https://github.com/facephi-clienters/SDK-CorePackage-SPM.git", .exactItem("2.9.0")),
+        .package(url: "https://github.com/facephi-clienters/FPHIDisclaimerWidget-SPM.git", .exactItem("0.2.0")),
+        .package(url: "https://github.com/facephi-clienters/SDK-CorePackage-SPM.git", .exactItem("2.10.0")),
     ],
     targets: [
         .target(
-            name: "SDK-DisclaimerComponent-SPM",
+            name: "SDK-TermsConditionsComponent-SPM",
             dependencies: [
-                "disclaimerComponent",
+                "termsConditionsComponent",
                 "SDK-CorePackage-SPM",
                 .product(
                     name: "FPHIDisclaimerWidget-SPM",
@@ -28,9 +28,9 @@ let package = Package(
             ],
         ),
         .binaryTarget(
-            name: "disclaimerComponent",
-            url: "https://facephicorp.jfrog.io/artifactory/spm-pro-fphi/SDK/FPHISDKDisclaimerComponent/2.9.0/disclaimerComponent.zip",
-            checksum: "93c8b3887a16c01e582cd62d7da3eba08921039eaee3d47c1f3c4a4ac5f64c2b"
+            name: "termsConditionsComponent",
+            url: "https://facephicorp.jfrog.io/artifactory/spm-pro-fphi/SDK/FPHISDKTermsConditionsComponent/2.10.0/termsConditionsComponent.zip",
+            checksum: "7370877a18539ce587a79279525c7c928d9899d910d97682d4fbe706e691496c"
         ),
     ]
 )
